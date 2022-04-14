@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+  .img-circle {
+    border-radius: 100%;
+
+  }
+</style>
+
+<body>
+
+  <div id="app">
+    <div class="row">
+      <div class="col-md-4">
+        <div v-for="(posts, index) in posts">
+          <div class="card mt-4 shadow">
+            <div class="card-body bg-light">
+              <div class="d-flex img-circle">
+                <img v-bind:src="posts.picture.medium" class="img-circle">
+                <h4 class="card-title name mx-2 mt-4">{{posts.name.title}} {{posts.name.first}} {{posts.name.last}} </h4>
+              </div>
+              <div>
+                <h6 class="card-title name mt-2">{{posts.gender}}</h6>
+                <h6 class="card-title name mt-2">{{posts.phone}}</h6>
+                <div class="likesncomments d-flex justify-content-between mt-3">
+                  <div class="likes"><i class="fa fa-thumbs-up text-primary " aria-hidden="true"></i> <i
+                      class="fa fa-heart text-danger m" aria-hidden="true"></i> 105</div>
+                  <div class="comments">85 comments</div>
+                </div>
+                <hr>
+                <div class="LCS d-flex justify-content-between pt-2">
+                  <div id="numbersOfThumbsup"><i class="fa fa-thumbs-o-up" id="thumbsUp1" aria-hidden="true"></i>Like</div>
+                  <div><i class="fa fa-comment-o" aria-hidden="true"></i>Comments</div>
+                  <div><i class="fa fa-share" aria-hidden="true"></i>Share</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.js"></script>
+  <script src="/index.js"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
